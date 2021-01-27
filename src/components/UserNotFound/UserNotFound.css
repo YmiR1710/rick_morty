@@ -1,0 +1,16 @@
+.UserNotFound{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.UserNotFound__info{
+    font-size: 50px;
+}
+
+.UserNotFound__image{
+    height: 800px;
+}

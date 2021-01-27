@@ -1,0 +1,23 @@
+.DetailedUserHeader{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+
+.DetailedUserHeader__logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DetailedUserHeader__logo{
+    width: 190px;
+    height: 56px;
+    margin: 15px 48px;
+}
+
+.DetailedUserHeader__searchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}

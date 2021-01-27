@@ -1,0 +1,46 @@
+.Card{
+    width: 282px;
+    height: 552px;
+    margin: 12px;
+    border-radius: 12px;
+    background-color: var(--background-dark);
+}
+
+.Card__content{
+    text-align: left;
+    padding: 24px 16px;
+}
+
+.Card__name{
+    color: var(--text-white);;
+    font-size: 24px;
+}
+
+.Card__tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Card__link{
+    text-decoration: none;
+}
+
+.Card__mainInfo{
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.Card__image{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.Card__infoLabel{
+    color: #Bfc1d3;
+    font-size: 13px;
+}
+
+.Card__infoValue{
+    color: var(--text-white);;
+}

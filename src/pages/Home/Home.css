@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.App__filters{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Search.App__heroSearch{
+  font-size: 24px;
+}
+
+.App__cardList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.App__resultContainer{
+  margin-top: 50px;
+}
