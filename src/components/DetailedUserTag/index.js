@@ -1,1 +1,1 @@
-export { default } from './DetailedUserTag'
+export {default} from './DetailedUserTag'

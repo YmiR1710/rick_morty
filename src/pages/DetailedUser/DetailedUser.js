@@ -1,55 +1,68 @@
 import './DetailedUser.css';
-import { format } from 'date-fns';
+import {format} from 'date-fns';
 import DetailedUserTag from '../../components/DetailedUserTag';
 import InfoValue from '../../components/InfoValue';
 import InfoLabel from '../../components/InfoLabel';
-import { NavLink, useParams } from "react-router-dom";
-import { useState } from 'react';
-import PropTypes from "prop-types";
+import {NavLink, useParams} from "react-router-dom";
+import {useEffect, useState} from 'react';
 import UserNotFound from "../../components/UserNotFound";
+import {getCharacter} from "../../api";
 
-const DetailedUser = ({ selectCharacter }) => {
+const DetailedUser = () => {
     const {id} = useParams();
 
-    const characterInfo = selectCharacter(Number(id));
+    const [character, setCharacter] = useState();
 
-    const birthDay = Number(characterInfo?.created.substring(8, 10));
-    const birthMonth = Number(characterInfo?.created.substring(5, 7)) - 1;
-    const birthYear = Number(characterInfo?.created.substring(0, 4));
+    useEffect(() => {
+        loadCharacter(id);
+    }, [id]);
 
-    const [statusOption, genderOption] = useState(null);
+    const loadCharacter = async (id) => {
+        const item = await getCharacter(id);
+        if (item.error) {
+            console.log(item.error);
+        } else {
+            setCharacter(item);
+        }
+    }
 
-    return characterInfo ? (<div className="DetailedUser">
+    const birthDay = Number(character?.created.substring(8, 10));
+    const birthMonth = Number(character?.created.substring(5, 7)) - 1;
+    const birthYear = Number(character?.created.substring(0, 4));
+
+    return character ? (<div className="DetailedUser">
 
         <div className="DetailedUser__imageContainer">
             <div className="DetailedUser__links">
-                <NavLink exact to="/" className="DetailedUser__link" activeClassName="DetailedUser__link DetailedUser__link_active">
+                <NavLink exact to="/" className="DetailedUser__link"
+                         activeClassName="DetailedUser__link DetailedUser__link_active">
                     Home >
                 </NavLink>
-                <NavLink className="DetailedUser__link" activeClassName="DetailedUser__link DetailedUser__link_active" exact to={`/character/${characterInfo.id}`}>
-                    {characterInfo.name}
+                <NavLink className="DetailedUser__link" activeClassName="DetailedUser__link DetailedUser__link_active"
+                         exact to={`/character/${character.id}`}>
+                    {character.name}
                 </NavLink>
             </div>
-            <img alt={characterInfo.name} src={characterInfo.image} className="DetailedUser__image"/>
+            <img alt={character.name} src={character.image} className="DetailedUser__image"/>
         </div>
 
         <div className="DetailedUser__description">
-            <h1 className="DetailedUser__name">#{characterInfo.id} {characterInfo.name}</h1>
+            <h1 className="DetailedUser__name">#{character.id} {character.name}</h1>
             <div className="DetailedUser__tagsList">
-                <DetailedUserTag value={characterInfo.status}/>
-                <DetailedUserTag value={characterInfo.gender}/>
+                <DetailedUserTag value={character.status}/>
+                <DetailedUserTag value={character.gender}/>
             </div>
             <div className="DetailedUser__mainInfo">
                 <InfoLabel text="Species"/>
-                <InfoValue text={characterInfo.species}/>
+                <InfoValue text={character.species}/>
                 <InfoLabel text="Origin"/>
-                <InfoValue text={characterInfo.origin.name}/>
+                <InfoValue text={character.origin.name}/>
                 <InfoLabel text="Birthday"/>
                 <InfoValue text={format(new Date(birthYear, birthMonth, birthDay), "dd MMM yyyy")}/>
                 <InfoLabel text="Last known location:"/>
-                <InfoValue text={characterInfo.location.name}/>
+                <InfoValue text={character.location.name}/>
                 <InfoLabel text="First seen in:"/>
-                <InfoValue text={characterInfo.origin.name}/>
+                <InfoValue text={character.origin.name}/>
             </div>
             <div className="DetailedUser__episodes">
                 <InfoLabel text="Episodes:"/>
@@ -61,9 +74,5 @@ const DetailedUser = ({ selectCharacter }) => {
         </div>
     </div>) : <UserNotFound/>;
 }
-
-DetailedUser.propTypes = {
-    selectCharacter: PropTypes.func.isRequired
-};
 
 export default DetailedUser;

@@ -6,8 +6,8 @@ const LogoHeader = () => {
             <span>
                 Surf the
             </span>
-            <Logo className="LogoHeader__logo"/>
-            <span>
+        <Logo className="LogoHeader__logo"/>
+        <span>
                 Universe
             </span>
     </h1>

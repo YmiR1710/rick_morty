@@ -1,4 +1,4 @@
-.UserNotFound{
+.UserNotFound {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,10 +7,10 @@
     margin-top: 60px;
 }
 
-.UserNotFound__info{
+.UserNotFound__info {
     font-size: 50px;
 }
 
-.UserNotFound__image{
+.UserNotFound__image {
     height: 800px;
 }

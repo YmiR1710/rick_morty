@@ -1,1 +1,1 @@
-export { default } from './InfoValue';
+export {default} from './InfoValue';

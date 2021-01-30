@@ -1,1 +1,1 @@
-export { default } from './DetailedUserHeader'
+export {default} from './DetailedUserHeader'

@@ -1,7 +1,7 @@
 import './DetailedUserTag.css'
 import PropTypes from "prop-types";
 
-const DetailedUserTag = ({ value }) => {
+const DetailedUserTag = ({value}) => {
     return <div className="DetailedUserTag">
         {value}
     </div>

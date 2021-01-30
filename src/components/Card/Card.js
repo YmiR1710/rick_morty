@@ -1,7 +1,6 @@
 import './Card.css'
 import Tag from '../Tag'
-import { useHistory } from "react-router-dom";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import InfoLabel from "../InfoLabel";
 import InfoValue from "../InfoValue";
 import PropTypes from 'prop-types';
@@ -28,10 +27,10 @@ const Card = ({id, name, status, species, type, gender, origin, location, image,
                 <Tag value={gender}/>
             </div>
             <div className="Card__mainInfo">
-                <InfoLabel className = "Card__infoLabel" text="Last known location:"></InfoLabel>
-                <InfoValue className = "Card__infoValue" text={location?.name}></InfoValue>
-                <InfoLabel className = "Card__infoLabel" text="First seen in:"></InfoLabel>
-                <InfoValue className = "Card__infoValue" text={origin?.name}></InfoValue>
+                <InfoLabel className="Card__infoLabel" text="Last known location:"></InfoLabel>
+                <InfoValue className="Card__infoValue" text={location?.name}></InfoValue>
+                <InfoLabel className="Card__infoLabel" text="First seen in:"></InfoLabel>
+                <InfoValue className="Card__infoValue" text={origin?.name}></InfoValue>
             </div>
         </div>
     </div>

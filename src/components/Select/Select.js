@@ -1,8 +1,8 @@
 import './Select.css';
-import { useState } from 'react';
+import {useState} from 'react';
 import PropTypes from "prop-types";
 
-const Select = ({ value, handleSelect, options, label, selectedOption }) => {
+const Select = ({value, handleSelect, options, label, selectedOption}) => {
     const [isOpened, setIsOpened] = useState(false);
 
     const handleIsOpened = () => setIsOpened(!isOpened);
@@ -13,7 +13,7 @@ const Select = ({ value, handleSelect, options, label, selectedOption }) => {
     };
 
     const renderOption = (option) =>
-        <li key={option.value} value={option.value} className="Select__option" onClick={ () => onOptionClick(option)}>
+        <li key={option.value} value={option.value} className="Select__option" onClick={() => onOptionClick(option)}>
             {option.label}
         </li>;
 
@@ -24,7 +24,7 @@ const Select = ({ value, handleSelect, options, label, selectedOption }) => {
                 <span className="Select__label">
                     {label}
                 </span>
-                <span className="Select__value">
+            <span className="Select__value">
                     {selectedOption?.label}
                 </span>
         </div>

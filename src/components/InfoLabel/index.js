@@ -1,1 +1,1 @@
-export { default } from './InfoLabel';
+export {default} from './InfoLabel';

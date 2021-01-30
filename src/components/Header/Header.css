@@ -1,10 +1,10 @@
-.Header{
+.Header {
     height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Header__Search{
+.Header__Search {
     height: 56px;
 }

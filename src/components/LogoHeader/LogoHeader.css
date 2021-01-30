@@ -1,11 +1,11 @@
-.LogoHeader{
+.LogoHeader {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5em;
 }
 
-.LogoHeader__logo{
+.LogoHeader__logo {
     width: 438px;
     height: 129px;
     margin: 0 48px;

@@ -1,31 +1,31 @@
-.Select{
+.Select {
     padding: 17px 24px;
     background: var(--background-light);
     border-radius: 8px;
-    width :260px;
+    width: 260px;
     position: relative;
     font-size: 23px;
     cursor: pointer;
 }
 
-.Select:first-child{
+.Select:first-child {
     margin-right: 40px;
 }
 
-.Select__selectedOption{
+.Select__selectedOption {
     position: relative;
 }
 
-.Select__label{
+.Select__label {
     color: var(--cta);
 }
 
-.Select__value{
+.Select__value {
     color: var(--text-dark);
     margin-left: 8px;
 }
 
-.Select__options{
+.Select__options {
     position: absolute;
     padding: 0;
     top: 100%;
@@ -35,13 +35,13 @@
     background: var(--background-light);
 }
 
-.Select__option{
+.Select__option {
     height: 50px;
     line-height: 50px;
     list-style-type: none;
     padding: 0 8px;
 }
 
-.Select__option:hover{
+.Select__option:hover {
     background: var(--cta);
 }

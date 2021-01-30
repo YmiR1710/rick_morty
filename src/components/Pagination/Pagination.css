@@ -1,0 +1,41 @@
+.Pagination{
+    display: flex;
+    margin-top: 15px;
+}
+
+.Pagination__page{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: var(--background-violet);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-white);
+    margin-right: 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Pagination__page:last-of-type{
+    margin-right: 0;
+}
+
+.Pagination__page_active{
+    background: var(--text-white);
+    color: var(--text-dark);
+}
+
+.Pagination__arrow{
+    height: 12px;
+    width: 12px;
+    transform: rotate(180deg);
+    content: url("../../assets/icons/arrow.svg");
+}
+
+.Pagination__arrow_next{
+    transform: rotate(360deg);
+}

@@ -1,22 +1,22 @@
-:root{
-  --cta: #3f8bfd;
-  --text-dark :#0a0a28;
-  --background-light: #f3f7fd;
-  --text-white: #ffffff;
-  --background-dark: #2a2a42;
-  --background-grey: #9b9cab;
-  --shadow: #e5e5e5;
-  --background-violet: #6c6c84;
+:root {
+    --cta: #3f8bfd;
+    --text-dark: #0a0a28;
+    --background-light: #f3f7fd;
+    --text-white: #ffffff;
+    --background-dark: #2a2a42;
+    --background-grey: #9b9cab;
+    --shadow: #e5e5e5;
+    --background-violet: #6c6c84;
 }
 
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

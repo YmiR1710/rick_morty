@@ -1,22 +1,22 @@
-.DetailedUser{
+.DetailedUser {
     display: flex;
     justify-content: center;
     margin-top: 70px;
 }
 
-.DetailedUser__imageContainer{
+.DetailedUser__imageContainer {
     display: inline-block;
     margin: 0 48px 0 120px;
     vertical-align: center;
     height: 470px;
 }
 
-.DetailedUser__image{
+.DetailedUser__image {
     display: inline-block;
     border-radius: 12px;
 }
 
-.DetailedUser__description{
+.DetailedUser__description {
     display: inline-block;
     margin-right: 48px;
     margin-top: 42px;
@@ -24,42 +24,42 @@
     height: 470px;
 }
 
-.DetailedUser__mainInfo{
+.DetailedUser__mainInfo {
     display: inline-block;
     margin-right: 20px;
 }
 
-.DetailedUser__episodes{
+.DetailedUser__episodes {
     display: inline-block;
     vertical-align: top;
 }
 
-.DetailedUser__tagsList{
+.DetailedUser__tagsList {
     margin-top: 16px;
     margin-bottom: 33px;
     display: flex;
     align-items: flex-end;
 }
 
-.DetailedUser__name{
+.DetailedUser__name {
     display: flex;
     align-items: flex-end;
     font-size: 46px;
 }
 
-.DetailedUser__links{
+.DetailedUser__links {
     font-size: 15px;
     margin-bottom: 44px;
     display: flex;
 }
 
-.DetailedUser__link{
+.DetailedUser__link {
     margin-right: 8px;
     color: var(--cta);
     text-decoration: none;
 }
 
-.DetailedUser__link_active{
+.DetailedUser__link_active {
     color: var(--text-dark);
     text-decoration: none;
 }
