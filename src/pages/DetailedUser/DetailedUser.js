@@ -40,23 +40,23 @@ const DetailedUser = ({ selectCharacter }) => {
                 <DetailedUserTag value={characterInfo.gender}/>
             </div>
             <div className="DetailedUser__mainInfo">
-                <InfoLabel text="Species"></InfoLabel>
-                <InfoValue text={characterInfo.species}></InfoValue>
-                <InfoLabel text="Origin"></InfoLabel>
-                <InfoValue text={characterInfo.origin.name}></InfoValue>
-                <InfoLabel text="Birthday"></InfoLabel>
-                <InfoValue text={format(new Date(birthYear, birthMonth, birthDay), "dd MMM yyyy")}></InfoValue>
-                <InfoLabel text="Last known location:"></InfoLabel>
-                <InfoValue text={characterInfo.location.name}></InfoValue>
-                <InfoLabel text="First seen in:"></InfoLabel>
-                <InfoValue text={characterInfo.origin.name}></InfoValue>
+                <InfoLabel text="Species"/>
+                <InfoValue text={characterInfo.species}/>
+                <InfoLabel text="Origin"/>
+                <InfoValue text={characterInfo.origin.name}/>
+                <InfoLabel text="Birthday"/>
+                <InfoValue text={format(new Date(birthYear, birthMonth, birthDay), "dd MMM yyyy")}/>
+                <InfoLabel text="Last known location:"/>
+                <InfoValue text={characterInfo.location.name}/>
+                <InfoLabel text="First seen in:"/>
+                <InfoValue text={characterInfo.origin.name}/>
             </div>
             <div className="DetailedUser__episodes">
-                <InfoLabel text="Episodes:"></InfoLabel>
-                <InfoValue text="S03E07: The Ricklantis Mixup"></InfoValue>
-                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"></InfoValue>
-                <InfoValue text="S03E07: The Ricklantis Mixup"></InfoValue>
-                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"></InfoValue>
+                <InfoLabel text="Episodes:"/>
+                <InfoValue text="S03E07: The Ricklantis Mixup"/>
+                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"/>
+                <InfoValue text="S03E07: The Ricklantis Mixup"/>
+                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"/>
             </div>
         </div>
     </div>) : <UserNotFound/>;

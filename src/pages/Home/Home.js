@@ -25,6 +25,10 @@ function Home({ characters }) {
 
     const [status, setStatus] = useState("");
 
+    const statusFilter = (character)  => character.status === status || status === "";
+
+    const genderFilter = (character) => character.gender === gender || gender === "";
+
     return (
         <div className="App">
             <LogoHeader/>
@@ -35,7 +39,7 @@ function Home({ characters }) {
             </div>
             <div className="App__resultContainer">
                 <div className="App__cardList">
-                    {characters?.filter(character => character.status === status || status === "").filter(character => character.gender === gender || gender === "").map(renderCharacter)}
+                    {characters?.filter(statusFilter).filter(genderFilter).map(renderCharacter)}
                 </div>
             </div>
         </div>
