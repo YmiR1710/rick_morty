@@ -1,22 +1,32 @@
-.DetailedUser {
+.DetailedEpisode {
     display: flex;
     justify-content: center;
     margin-top: 130px;
 }
 
-.DetailedUser__imageContainer {
+.DetailedEpisode__imageContainer {
     display: inline-block;
     margin: 0 48px 0 120px;
     vertical-align: center;
     height: 470px;
 }
 
-.DetailedUser__image {
-    display: inline-block;
+.DetailedEpisode__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 12px;
+    background: var(--background-grey);
+    color: var(--text-white);
+    width: 300px;
+    height: 300px;
 }
 
-.DetailedUser__description {
+.DetailedEpisode__image_text{
+    font-size: 50px;
+}
+
+.DetailedEpisode__description {
     display: inline-block;
     margin-right: 48px;
     margin-top: 42px;
@@ -24,47 +34,47 @@
     height: 470px;
 }
 
-.DetailedUser__mainInfo {
+.DetailedEpisode__mainInfo {
     display: inline-block;
     margin-right: 20px;
 }
 
-.DetailedUser__episodes {
+.DetailedEpisode__characters {
     display: inline-block;
     vertical-align: top;
 }
 
-.DetailedUser__tagsList {
+.DetailedEpisode__tagsList {
     margin-top: 16px;
     margin-bottom: 33px;
     display: flex;
     align-items: flex-end;
 }
 
-.DetailedUser__name {
+.DetailedEpisode__name {
     display: flex;
     align-items: flex-end;
     font-size: 46px;
 }
 
-.DetailedUser__links {
+.DetailedEpisode__links {
     font-size: 15px;
     margin-bottom: 44px;
     display: flex;
 }
 
-.DetailedUser__link {
+.DetailedEpisode__link {
     margin-right: 8px;
     color: var(--cta);
     text-decoration: none;
 }
 
-.DetailedUser__link_active {
+.DetailedEpisode__link_active {
     color: var(--text-dark);
     text-decoration: none;
 }
 
-.DetailedUser__episode_link{
+.DetailedEpisode__character_link{
     text-decoration: none;
     color: var(--text-dark);
 }

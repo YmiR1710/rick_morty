@@ -8,3 +8,7 @@ export const getCharacters = async (page = 1, params) => {
 export const getCharacter = async (id) => {
     return (await fetch(`${SERVER_URL}/character/${id.toString()}`)).json();
 }
+
+export const getEpisode = async (id) => {
+    return (await fetch(`${SERVER_URL}/episode/${id.toString()}`)).json();
+}

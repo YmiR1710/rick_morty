@@ -5,6 +5,7 @@ import DetailedUser from "./pages/DetailedUser";
 import DetailedUserHeader from "./components/DetailedUserHeader";
 import {useCallback, useEffect, useState} from "react";
 import {getCharacters} from "./api";
+import DetailedEpisode from "./pages/DetailedEpisode";
 
 const Router = () => {
     const [characters, setCharacters] = useState();
@@ -65,6 +66,9 @@ const Router = () => {
                     <Switch>
                         <Route exact path="/character/:id">
                             <DetailedUser selectCharacter={getCharacterById}/>
+                        </Route>
+                        <Route exact path="/episode/:id">
+                            <DetailedEpisode/>
                         </Route>
                         <Route exact path="*">
                             <Redirect to="/search"/>

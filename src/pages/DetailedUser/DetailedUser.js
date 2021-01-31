@@ -6,7 +6,7 @@ import InfoLabel from '../../components/InfoLabel';
 import {NavLink, useParams} from "react-router-dom";
 import {useEffect, useState} from 'react';
 import UserNotFound from "../../components/UserNotFound";
-import {getCharacter} from "../../api";
+import {getCharacter, getEpisode} from "../../api";
 
 const DetailedUser = () => {
     const {id} = useParams();
@@ -24,6 +24,13 @@ const DetailedUser = () => {
         } else {
             setCharacter(item);
         }
+    }
+
+    const renderEpisodes = (episodeReference) => {
+        const id = episodeReference.split('/').slice(-1)[0];
+        return <NavLink className="DetailedUser__episode_link" key={id} exact to={`/episode/${id}`}>
+            <InfoValue text={episodeReference}/>
+        </NavLink>
     }
 
     const birthDay = Number(character?.created.substring(8, 10));
@@ -66,10 +73,7 @@ const DetailedUser = () => {
             </div>
             <div className="DetailedUser__episodes">
                 <InfoLabel text="Episodes:"/>
-                <InfoValue text="S03E07: The Ricklantis Mixup"/>
-                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"/>
-                <InfoValue text="S03E07: The Ricklantis Mixup"/>
-                <InfoValue text="S01E10: Close Rick-counters of the Rick Kind"/>
+                {character.episode?.map(renderEpisodes)}
             </div>
         </div>
     </div>) : <UserNotFound/>;
