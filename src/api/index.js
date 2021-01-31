@@ -1,8 +1,8 @@
 import {SERVER_URL} from "../utils";
 
-export const getCharacters = async (params) => {
+export const getCharacters = async (page = 1, params) => {
     const searchParams = new URLSearchParams(params);
-    return (await fetch(`${SERVER_URL}/character?${searchParams.toString()}`)).json();
+    return (await fetch(`${SERVER_URL}/character?page=${page}&${searchParams.toString()}`)).json();
 }
 
 export const getCharacter = async (id) => {

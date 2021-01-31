@@ -5,7 +5,6 @@ import Card from "../../components/Card";
 import LogoHeader from "../../components/LogoHeader";
 import PropTypes from "prop-types";
 import Pagination from "../../components/Pagination";
-import {useState} from "react";
 
 const statusOptions = [
     {value: "", label: "all"},
@@ -19,22 +18,26 @@ const genderOptions = [
     {value: "Female", label: "female"},
 ];
 
-function Home({characters, getIdByName, gender, setGender, status, setStatus, characterName, setCharacterName, pages}) {
+function Home({
+                  characters,
+                  getIdByName,
+                  gender,
+                  setGender,
+                  status,
+                  setStatus,
+                  name,
+                  setName,
+                  currentPage,
+                  setCurrentPage,
+                  totalPages
+              }) {
 
     const renderCharacter = (character) => <Card key={character.id} {...character}/>
-
-    const statusFilter = (character) => character.status === status || status === "";
-
-    const genderFilter = (character) => character.gender === gender || gender === "";
-
-    const nameFilter = (character) => character.name.toLowerCase().includes(characterName.toLowerCase());
-
-    const [page, setPage] = useState(0);
 
     return (
         <div className="App">
             <LogoHeader/>
-            <Header getIdByName={getIdByName} characterName={characterName} setCharacterName={setCharacterName}/>
+            <Header getIdByName={getIdByName} characterName={name} setCharacterName={setName}/>
             <div className="App__filters">
                 <Select label="Status" selectedOption={status => setStatus(status)} value={status}
                         handleSelect={setStatus} options={statusOptions}/>
@@ -43,9 +46,9 @@ function Home({characters, getIdByName, gender, setGender, status, setStatus, ch
             </div>
             <div className="App__resultContainer">
                 <div className="App__cardList">
-                    {characters?.filter(statusFilter).filter(genderFilter).filter(nameFilter).map(renderCharacter)}
+                    {characters?.map(renderCharacter)}
                 </div>
-                <Pagination pages={7} setCurrentPage={setPage} currentPage={page}/>
+                <Pagination pages={totalPages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
             </div>
         </div>
     );
