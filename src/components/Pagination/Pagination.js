@@ -3,6 +3,7 @@ import _ from 'lodash';
 import './Pagination.css';
 
 const Pagination = ({pages, setCurrentPage, currentPage}) => {
+    // todo: remove unused parts of the code
     const setPagesArray = _(Array(pages))
         .fill(null)
         .map((el, ind) => ind)

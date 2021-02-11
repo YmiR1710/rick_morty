@@ -1,6 +1,7 @@
 import './LogoHeader.css';
 import {ReactComponent as Logo} from "../../assets/icons/logo.svg";
 
+// todo: prettify code
 const LogoHeader = () => {
     return <h1 className="LogoHeader">
             <span>

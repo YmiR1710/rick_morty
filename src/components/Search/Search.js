@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {useHistory} from "react-router-dom";
 
 const Search = ({className, value, setValue, getIdByName}) => {
+    // todo: prettify code ({ target: { value } }) - eslint would auto fix it
     const handleChange = ({target: {value}}) => {
         setValue(value);
     };

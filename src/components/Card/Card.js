@@ -5,9 +5,13 @@ import InfoLabel from "../InfoLabel";
 import InfoValue from "../InfoValue";
 import PropTypes from 'prop-types';
 
+// TODO: reorder imports (eslint could auto fix it)
+
+// TODO: unused props
 const Card = ({id, name, status, species, type, gender, origin, location, image, episode, url, created}) => {
     const history = useHistory();
 
+    // TODO: use either history push or <Link />, not both, as they do the same
     const handleClick = () => history.push('/character/${id}');
 
     return <div className="Card">
@@ -27,6 +31,7 @@ const Card = ({id, name, status, species, type, gender, origin, location, image,
                 <Tag value={gender}/>
             </div>
             <div className="Card__mainInfo">
+                {/*TODO: empty tags can be collapsed (<InfoLabel /> */}
                 <InfoLabel className="Card__infoLabel" text="Last known location:"></InfoLabel>
                 <InfoValue className="Card__infoValue" text={location?.name}></InfoValue>
                 <InfoLabel className="Card__infoLabel" text="First seen in:"></InfoLabel>
