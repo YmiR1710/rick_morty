@@ -8,6 +8,8 @@ import {useEffect, useState} from 'react';
 import UserNotFound from "../../components/UserNotFound";
 import {getCharacter, getEpisode} from "../../api";
 
+// todo: imports
+
 const DetailedUser = () => {
     const {id} = useParams();
 

@@ -6,6 +6,9 @@ import {useState, useEffect} from 'react';
 import PropTypes from "prop-types";
 import {QUOTES} from "../../utils";
 
+// TODO: reorder imports (absolute first - packages, relative last - your files)
+// eslint could auto fix it, but you don't have it ;(
+
 const DetailedUserHeader = ({getIdByName}) => {
     const [characterName, setCharacterName] = useState("");
     const [currentQuote, setCurrentQuote] = useState(QUOTES[Math.floor(Math.random() * QUOTES.length)]);

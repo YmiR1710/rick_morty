@@ -1,3 +1,4 @@
+// todo: you should use .env var here
 export const SERVER_URL = 'https://rickandmortyapi.com/api';
 
 export const QUOTES = ["If you spend all day shuffling words around, you can make anything sound bad, Morty.",

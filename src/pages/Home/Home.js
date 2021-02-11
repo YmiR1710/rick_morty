@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 import LogoHeader from "../../components/LogoHeader";
 import PropTypes from "prop-types";
 import Pagination from "../../components/Pagination";
-
+// todo: imports
 const statusOptions = [
     {value: "", label: "all"},
     {value: "Alive", label: "alive"},
@@ -17,7 +17,7 @@ const genderOptions = [
     {value: "Male", label: "male"},
     {value: "Female", label: "female"},
 ];
-
+// todo: prettify
 function Home({
                   characters,
                   getIdByName,

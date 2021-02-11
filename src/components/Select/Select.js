@@ -1,7 +1,7 @@
 import './Select.css';
 import {useState} from 'react';
 import PropTypes from "prop-types";
-
+//todo: reorder imports
 const Select = ({value, handleSelect, options, label, selectedOption}) => {
     const [isOpened, setIsOpened] = useState(false);
 
@@ -13,12 +13,14 @@ const Select = ({value, handleSelect, options, label, selectedOption}) => {
     };
 
     const renderOption = (option) =>
+        // todo: no arrow functions in render/return
         <li key={option.value} value={option.value} className="Select__option" onClick={() => onOptionClick(option)}>
             {option.label}
         </li>;
 
     selectedOption = options?.find(option => option.value === value);
 
+    // todo: prettify code
     return <div className="Select">
         <div className="Select__selectedOption" onClick={handleIsOpened}>
                 <span className="Select__label">

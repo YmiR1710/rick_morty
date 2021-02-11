@@ -6,6 +6,7 @@ import {parse, format} from "date-fns";
 import {getEpisode} from "../../api";
 import {useEffect, useState} from "react";
 
+// todo: reorder imports and prettify {} with offsets
 const DetailedEpisode = () => {
     const {id} = useParams();
 
@@ -33,8 +34,10 @@ const DetailedEpisode = () => {
         </NavLink>
     }
 
+    // todo: remove console logs
     console.log(episode.characters)
 
+    // todo: prettify code
     return <div className="DetailedEpisode">
         <div className="DetailedEpisode__imageContainer">
             <div className="DetailedEpisode__links">

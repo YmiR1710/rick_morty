@@ -15,6 +15,7 @@ const Router = () => {
     const [queryName, setQueryName] = useState("");
     const [currentPage, setCurrentPage] = useState(0);
     const [pages, setPages] = useState(0);
+    // todo: do smth with this, it's unused so far
     const [isLoading, setIsLoading] = useState(false);
 
     const delayedQuery = useCallback(_.debounce(setQueryName, 500), [setQueryName]);
